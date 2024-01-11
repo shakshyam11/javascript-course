@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="" class="js-button">click</button>
+  <script>
+   const buttonelement=   document.querySelector('.js-button');
+    
+   const eventlistner =()=>{
+    console.log('click')
+   };
+   buttonelement.addEventListener('click',eventlistner);
+
+   buttonelement.removeEventListener('click',eventlistner);
+
+   buttonelement.addEventListener('click',()=>{
+    console.log('click2');
+   });
+
+
+
+      /*  greeding();
+
+
+        ////fucntions are values 
+  
+      function greeding(){
+        console.log('hello');
+      }
+        greeding();
+  
+        const num = 2;
+        const function1 = function (){
+          console.log('hellosathi');
+        };
+        console.log(function1);
+        console.log(typeof function1);
+  
+        function1();
+  
+        const object1 = {
+          num :2 ,
+          fun: function greeding(){
+            console.log('hello3');
+          }
+  
+        };
+        object1.fun();
+         /// value inside paramater and called by function 
+        function display(param){
+          console.log(param);
+        }
+        display('2');
+          ///   function inside paramater 
+          //passing fucntion into another function
+        function run(param){
+          param();
+          
+        }
+        run(function(){
+          console.log('hello4');
+        });
+        */
+         // time interval for functions to run 
+      //   setTimeout(function(){
+      //     console.log('timeout');
+      //     console.log('timeout22');
+      //   },3000);
+      //   console.log('nextline');
+      //  ///it also works just same and both are asynchronous 
+       
+      //   setInterval(function() {
+      //     console.log('interval');
+
+      //   },4000);
+      //   ///this will run first
+      //   console.log('nextline2');
+
+/*
+        [
+          'makedinner',
+          'wash dishes',
+          'watch youtube'
+        ].forEach( (value,index)=>{
+          if (value == 'wash dishes'){
+            return;
+          }
+          console.log(value);
+          console.log(index);
+        });
+
+        const regularfunction = function(param,param2){
+          console.log('hello');
+          return 5;
+        }
+
+
+        const arrowfunction =  (param,param2)=> {
+          console.log('hello');
+          return 5;
+        };
+        arrowfunction();
+
+        const oneparam = param => {
+         console.log(param+1);
+        }
+        oneparam(2);
+
+        const oneline = ()=> 2+3;
+        console.log(oneline())
+
+        const object2 = {
+          method : ()=>{
+
+          }, 
+          method(){
+
+          }
+        }
+        
+        // });
+        // const add = function(){
+        //      console.log(2+3);
+        // }
+        
+        // for (let i =0; i<2; i++){
+        //   add();
+        // }
+        // runtwice(fun)
+        */
+
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,62 @@
+   document.querySelector('.js-add-todo-button').addEventListener('click',()=>{
+      addtodo();
+   })
+   
+   const todolist =[/*{name :'make dinner', 
+                     duedate : '2022-12-22'},
+                     {name :'wash dishes',
+                     duedate:'2022-12-22'}*/];
+         rendertodolist();
+         function rendertodolist(){
+         let todolistHTML ='';
+ 
+todolist.forEach(function(todoObject,index){
+   // const todoObject = todolist[i];
+   // //const name = todoObject.name;
+   const duedate =todoObject.duedate;
+ 
+   const {name }= todoObject;
+ 
+   const html =` 
+    <div class = "">${name}</div>
+    <div>${duedate}</div>
+    <button class = "delete-todo-button js-delete-todo" >Delete</button>`;
+   todolistHTML += html;
+});
+
+
+  
+ document.querySelector('.js-todo-list')  .innerHTML = todolistHTML;
+
+   document.querySelectorAll('.js-delete-todo').forEach((deleteButton,index) => {
+   deleteButton.addEventListener('click',()=>{
+      todolist.splice({index},1);
+      rendertodolist();
+
+     })
+  });
+ }
+
+
+
+   function addtodo(){
+   const dateInputElement= document.querySelector('.js-due-date-input');
+
+   const duedate= dateInputElement.value;
+
+  const inputElement =document.querySelector('.js-name-input');
+
+  const name = inputElement.value;
+  
+   if (!name.trim()){
+      alert('please type something before adding');
+   }else if(!duedate.trim()){
+      alert('please insert date'); 
+    
+   }else{todolist.push({//name: name,
+      //duedate: duedate
+      name,duedate});
+   rendertodolist();
+   inputElement.value='';
+   }
+}
